@@ -1,0 +1,210 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: .4s;
+}
+
+.front-text h3 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: tan;
+}
+
+
+.card:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,.3);
+}
+
+.card:hover .front {
+    transform: rotateY(-160deg);
+}
+
+.card:hover .front-text {
+    display: none;
+}
+
+.card:hover .wrapdeco {
+    display: none;
+}
+
+.front {
+    position: relative;
+    background-color:  white;
+    width:250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+.inside {
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+    width: 250px;
+    height: 350px;
+    left: 0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.2);
+} 
+
+.happy .toyou {
+    position: relative;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+
+}
+
+.happy {
+    transform: translateY(200px);
+    z-index: 1;
+}
+
+.toyou {
+    transform: translateY(150px);
+    z-index: 1;
+}
+.birthday {
+    position: relative;
+    font-family: Arial;
+    font-size: 35px;
+    transform: translateY(175px);
+    z-index: 1;
+}
+
+.decorations {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    top: -400px;
+    right: 15px;
+}
+.balloons {
+    position: absolute;
+}
+.balloon1, .balloon2, .balloon3, .balloon4{
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    opacity: 90%;
+}
+.balloon1{
+    background-color: red;
+    top: 100px;
+    left: 0px;
+}
+
+.balloon2{
+    background-color: green;
+    top: 120px;
+    left: 60px;
+}
+
+.balloon3{
+    background-color: yellow;
+    top: 90px;
+    left: 120px;
+}
+
+.balloon4{
+    background-color: aqua;
+    top:110px;
+    left: 165px;
+}
+
+.balloon1:before, .balloon2:before, .balloon3:before, .balloon4:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: beige;
+    top: 95px;
+    z-index: -1;
+}
+
+.birthdaywish {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.intro .content {
+    position: relative;
+    margin-left: 5px;
+}
+
+.PS {
+    font-size: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.signature {
+    position: relative;
+    font-family: 'Gaegu', cursive;
+    padding: 0 20 0 20;
+    left: 65%;
+}
+
+button{
+    position: absolute;
+    
+    left: 150px;
+}
+button {
+  appearance: none;
+  background-color: rgb(202, 199, 199);
+  color: aliceblue;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 5px;
+  line-height: normal;
+  border:none;
+  margin: 0;
+  min-height: 0px;
+  min-width: 0;
+  outline: none;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10%;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
